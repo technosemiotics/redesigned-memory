@@ -54,7 +54,8 @@ body {
 }
 
 .site-title {
-	font-size: 1.2rem;
+	font-size: 1.1rem;
+  letter-spacing: 0;
 	&,
   &:visited {
     color: $platinum;
@@ -67,39 +68,50 @@ body {
 
 .site-nav {
 	.nav-item {
-		color: $platinum;
-		font-size: 0.8rem;
+		color: $platinum; /* light text dark bg */
+		font-size: 0.75rem;
+    letter-spacing: 1px;
 		font-weight: 400;
 		text-transform: uppercase;
+
+    &:hover {
+      /*text-decoration: none !important;*/
+    }
 	}
 }
 
-
-/**
- * Links
- */
-.page-content a {
-  color: $sharp-magenta;
-  text-decoration: none;
-  font-weight: 500;
-
-  &:visited {
-    color: $tyrian-purple;
-  }
-
-  &:hover {
-    color: tyrian-purple;
-    text-decoration: underline $tyrian-purple;
-    text-underline-offset: 3px;
-  }
-
-  .social-media-list &:hover {
-    text-decoration: none;
-
-    .username {
-      text-decoration: underline;
+/* small screen dropdown reverse menu colour fix */
+.site-nav #nav-trigger:checked ~ .nav-items .nav-item {
+        color: inherit;
     }
+
+
+header {
+  /*border-bottom: 1px solid #66023C;*/
+
+
+  h1 {
+    color: $coffee-bean;
+    font-weight: 400 !important;
   }
+}
+
+.post-header {
+  padding: 2em 0;
+  margin-bottom: 0;
+}
+
+
+.post-meta {
+  font-weight: 200;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: inherit;
+
+  .meta-label {
+    font-weight: 200;
+  }
+
 }
 
 /**
@@ -150,33 +162,33 @@ blockquote {
 }
 
 
-.post-meta {
-	font-weight: 200;
-	text-transform: uppercase;
-	/*font-size: 0.8rem;*/
-	color: inherit;
 
-	.meta-label {
-		font-weight: 200;
-	}
+/**
+ * Links
+ */
+.page-content a {
+  color: $sharp-magenta;
+  text-decoration: none;
+  font-weight: 500;
 
+  &:visited {
+    color: $tyrian-purple;
+  }
+
+  &:hover {
+    color: tyrian-purple;
+    text-decoration: underline $tyrian-purple;
+    text-underline-offset: 3px;
+  }
+
+  .social-media-list &:hover {
+    text-decoration: none;
+
+    .username {
+      text-decoration: underline;
+    }
+  }
 }
-
-header {
-	/*border-bottom: 1px solid #66023C;*/
-
-
-	h1 {
-		color: coffee-bean;
-	}
-}
-
-.post-header {
-	padding: 2em;
-	margin-bottom: 0;
-}
-
-
 
 /**
  * Site footer
