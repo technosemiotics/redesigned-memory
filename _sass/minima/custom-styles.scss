@@ -1,0 +1,219 @@
+// Placeholder to allow defining custom styles that override everything else.
+// (Use `_sass/minima/custom-variables.scss` to override variable defaults)
+
+/* SCSS HEX PALETTES */
+$platinum: #eef0f2ff;
+$silver: #c6c7c4ff;
+$lilac-ash: #a2999eff;
+$smoky-rose: #846a6aff;
+$gunmetal: #353b3cff;
+
+$mint-cream: #eaf2efff;
+$vintage-berry: #912f56ff;
+$deep-purple: #521945ff;
+$midnight-violet: #361f27ff;
+$pitch-black: #0d090aff;
+
+$coffee-bean: #251101ff;
+$crimson-violet: #470024ff;
+$deep-purple: #5b1865ff;
+$dusk-blue: #2c5784ff;
+$dusty-denim: #5688c7ff;
+
+
+/* mujalt korjatud vÄrvid */
+$sharp-magenta: #8b008b;
+$tyrian-purple: #66023C;
+$dark-magenta: #530053;
+$thistle: #d8bfd8;
+
+
+$ts-bg: #f1ede7;
+$ts-roheline: #00594F;
+
+
+/** 
+ * ##### BODY STYLES ##### 
+ */
+
+body {
+  font-family: "Helvetica Neue", sans-serif;  
+  background-color: $platinum;
+  color: $midnight-violet;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+
+/**
+ * Site header
+ */
+.site-header {
+  background-color:$coffee-bean;
+  border-top: 5px solid $dark-magenta;
+  border-bottom: 1px solid $dark-magenta;
+}
+
+.site-title {
+	font-size: 1.2rem;
+	&,
+  &:visited {
+    color: $platinum;
+    text-decoration: none;
+  }
+  &:hover {
+  	text-decoration: none !important;
+  }
+}
+
+.site-nav {
+	.nav-item {
+		color: $platinum;
+		font-size: 0.8rem;
+		font-weight: 400;
+		text-transform: uppercase;
+	}
+}
+
+
+/**
+ * Links
+ */
+.page-content a {
+  color: $sharp-magenta;
+  text-decoration: none;
+  font-weight: 500;
+
+  &:visited {
+    color: $tyrian-purple;
+  }
+
+  &:hover {
+    color: tyrian-purple;
+    text-decoration: underline $tyrian-purple;
+    text-underline-offset: 3px;
+  }
+
+  .social-media-list &:hover {
+    text-decoration: none;
+
+    .username {
+      text-decoration: underline;
+    }
+  }
+}
+
+/**
+ * Headings
+ */
+h1, h2, h3, h4, h5, h6 {
+  color: $coffee-bean;
+
+  a, a:visited {
+    color: $coffee-bean;
+  }
+}
+
+h1, h2 {
+	font-family: "Helvetica Neue", sans-serif;
+	text-transform: uppercase;
+	font-weight: 500;
+	font-size: 1.4rem !important;
+}
+
+h3 {
+	font-weight: 500;
+	font-size: 1.3rem !important;
+}
+
+h4 {
+	font-weight: 500;
+	font-size: 1.1rem !important;
+}
+h5, h6 {
+	font-weight: 500;
+	font-size: 1rem !important;
+	text-transform: uppercase;
+}
+
+
+/**
+ * Blockquotes
+ */
+blockquote {
+  color: $deep-purple;
+}
+
+
+
+.page-content {
+	padding: 2rem 0;
+}
+
+
+.post-meta {
+	font-weight: 200;
+	text-transform: uppercase;
+	/*font-size: 0.8rem;*/
+	color: inherit;
+
+	.meta-label {
+		font-weight: 200;
+	}
+
+}
+
+header {
+	/*border-bottom: 1px solid #66023C;*/
+
+
+	h1 {
+		color: coffee-bean;
+	}
+}
+
+.post-header {
+	padding: 2em;
+	margin-bottom: 0;
+}
+
+
+
+/**
+ * Site footer
+ */
+.site-footer {
+  border-top: 2px solid $dark-magenta;
+}
+
+.footer-col-wrapper, .social-links {
+	color: $tyrian-purple !important;
+
+  a,
+  a:hover,
+  a:visited {
+  	color: $tyrian-purple !important;
+  }	
+}
+
+.social-media-list {
+	margin: 0;
+
+
+	li {
+    float: left;
+    min-width: 30px;
+    min-height: 30px; 
+    /*text-align: center;*/
+    /*margin: 5px 5px 5px 0; */
+
+    a {
+    display: block;
+    padding: 0;
+    border: none;
+  }
+}
+
+
+}
+
+
