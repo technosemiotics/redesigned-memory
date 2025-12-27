@@ -76,6 +76,10 @@ collections:
   pages:
     output: true
     permalink: /:name/
+  events:
+    output: true
+    permalink: /events/:name/
+    sort_by: start
   concepts:
     output: true
     permalink: /concepts/:name/
