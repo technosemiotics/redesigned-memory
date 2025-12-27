@@ -5,7 +5,9 @@ author:
 
 tagline: minima-based design endeavour
 description: >
-  Lorem ipsum
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+  Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. 
+  Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit.
 
 
 # Build settings
@@ -40,27 +42,32 @@ minima:
   #   the `path` property (as represented via Liquid) of the pages in the order they
   #   should be rendered.
   # nav_pages:
-  #   - pages/about.md
-  #   - categories.md
-  #   - resources.md
-  #   - critical-ai-scholars.md
+  #   - _pages/about.md
+  
+  nav_pages_footer:
+    - _pages/posts.md
+    - _pages/events.md
+    - _pages/categories.md
+
 
   # Set to `true` to show excerpts on the homepage.
-  show_excerpts: false
+  show_excerpts: true
 
   # Minima date format.
   #   The default value is "%b %d, %Y" (e.g. Nov 14, 2023).
   #   Refer to https://shopify.github.io/liquid/filters/date/ for valid values.
   date_format: "%A, %B %d, %Y"
-
-  # Social Media Links
-  #   Renders icons via Font Awesome Free webfonts CDN, based on ordered list of entries.
-  #   Entry keys:
-  #     * title    Tooltip rendered on hovering over icon.
-  #     * icon     Font Awesome icon id. `github` corresponds to `fa-github`.
-  #     * url      Full URL of social profile.
+  event_date_format: "%A, %B %d, %Y %H:%M %Z"
 
 
+# Social links in the footer. Add full URLs.
+
+social:
+    zenodo: ""
+    linkedin: ""
+    github: ""
+    youtube: ""
+    instagram: ""
 
 
 # COLLECTIONS and DEFAULT settings ## TS ##
@@ -69,25 +76,38 @@ collections:
   pages:
     output: true
     permalink: /:name/
-
+  concepts:
+    output: true
+    permalink: /concepts/:name/
 
 
 defaults:
   -
     scope:
-      path: "pages" # an empty string here means all files in the project
+      path: "" # an empty string here means all files in the project
     values:
       layout: "page"
   -
     scope:
-      path: "posts" # an empty string here means all files in the project
+      path: "" # an empty string here means all files in the project
+      type: "posts"
     values:
       layout: "post"
   -
     scope:
       path: "" # an empty string here means all files in the project
+      type: "pages"
     values:
-      layout: "post"
+      layout: "page"
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "concepts"
+    values:
+      layout: "concept"
+
+
+future: false
 
 
 
