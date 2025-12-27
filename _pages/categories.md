@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Categories
 permalink: /categories/
 ---
@@ -8,10 +7,10 @@ permalink: /categories/
 {% for category in site.categories %}
   <div class="archive-group">
     {% capture category_name %}{{ category | first }}{% endcapture %}
-    <div id="#{{ category_name | slugize }}"></div>
+    <div id="#{{ category_name | slugify }}"></div>
     <p></p>
-    <h3 class="category-head">{{ category_name }}</h3>
-    <a name="{{ category_name | slugize }}"></a>
+    <h5 class="category-head">{{ category_name }}</h5>
+    <a name="{{ category_name | slugify }}"></a>
     {% for post in site.categories[category_name] %}
     <article class="archive-item">
       <h4><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h4>

@@ -3,7 +3,8 @@ layout: base
 ---
 
 
-{%- include hero-header.html -%}
+
+{%- include page-header.html -%}
 
 <main class="page-content" aria-label="Content">
   <div class="wrapper">
@@ -15,17 +16,10 @@ layout: base
 
 {%- include tags.html -%}
 
+
+
 {%- include post-navigation.html -%}
 
-      {% if jekyll.environment == 'production' -%}
-        {% if page.comments == false -%}
-        <div class="comments-disabled-message">
-          Comments have been disabled for this post.
-        </div>
-        {% else -%}
-          {%- include comments.html -%}
-        {% endif -%}
-      {% endif -%}
 
       <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
     </article>
