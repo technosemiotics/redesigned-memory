@@ -1,35 +1,54 @@
 // Placeholder to allow defining custom styles that override everything else.
 // (Use `_sass/minima/custom-variables.scss` to override variable defaults)
 
-/* SCSS HEX PALETTES */
+
+
+
+/* colours */
 $platinum: #eef0f2ff;
-$silver: #c6c7c4ff;
-$lilac-ash: #a2999eff;
-$smoky-rose: #846a6aff;
-$gunmetal: #353b3cff;
-
-$mint-cream: #eaf2efff;
-$vintage-berry: #912f56ff;
-$deep-purple: #521945ff;
-$midnight-violet: #361f27ff;
-$pitch-black: #0d090aff;
-
 $coffee-bean: #251101ff;
-$crimson-violet: #470024ff;
-$deep-purple: #5b1865ff;
-$dusk-blue: #2c5784ff;
-$dusty-denim: #5688c7ff;
 
-
-/* mujalt korjatud vÄrvid */
 $sharp-magenta: #8b008b;
 $tyrian-purple: #66023C;
 $dark-magenta: #530053;
+$deep-purple: #521945ff;
+$midnight-violet: #361f27ff;
+
 $thistle: #d8bfd8;
+$lavender-mist: #E7E8F3;
+$lavender-mist-2: #EFF0FC;
+$lavender-mist-3: #EEEFFC;
+$ghost-white: #E9EAF3;
 
 
-$ts-bg: #f1ede7;
-$ts-roheline: #00594F;
+
+
+/**
+ * COLOUR DEFAULTS
+ */
+
+$bg-color: $lavender-mist;
+$text: $midnight-violet;
+$heading-color: $coffee-bean;
+
+$nav-bg: $coffee-bean;
+$nav-link: $platinum;
+
+$hero-bg: $thistle;
+
+$border: $dark-magenta;
+$border-light: $thistle;
+
+$card-bg: $lavender-mist-2;
+$card-text: $midnight-violet;
+
+$blockquote: $deep-purple;
+$link: $sharp-magenta;
+$link-hover: $tyrian-purple;
+
+
+
+
 
 
 /** 
@@ -38,19 +57,25 @@ $ts-roheline: #00594F;
 
 body {
   font-family: "Helvetica Neue", sans-serif;  
-  background-color: $platinum;
-  color: $midnight-violet;
+  background-color: $bg-color;
+  color: $text;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
+
+  a,
+  a:visited,
+  a:hover {
+    text-decoration: none;
+  }
 }
 
 /**
  * Site header
  */
 .site-header {
-  background-color:$coffee-bean;
-  border-top: 5px solid $dark-magenta;
-  border-bottom: 1px solid $dark-magenta;
+  background-color:$nav-bg;
+  border-top: 5px solid $border;
+  border-bottom: 1px solid $border;
 }
 
 .site-title {
@@ -58,7 +83,7 @@ body {
   letter-spacing: 0;
 	&,
   &:visited {
-    color: $platinum;
+    color: $nav-link;
     text-decoration: none;
   }
   &:hover {
@@ -68,14 +93,14 @@ body {
 
 .site-nav {
 	.nav-item {
-		color: $platinum; /* light text dark bg */
+		color: $nav-link; /* light text dark bg */
 		font-size: 0.75rem;
     letter-spacing: 1px;
 		font-weight: 400;
 		text-transform: uppercase;
 
     &:hover {
-      /*text-decoration: none !important;*/
+      color: #fff;
     }
 	}
 }
@@ -87,11 +112,11 @@ body {
 
 
 header {
-  /*border-bottom: 1px solid #66023C;*/
+  /*border-bottom: 1px solid $border;*/
 
 
   h1 {
-    color: $coffee-bean;
+    color: $heading-color;
     font-weight: 400 !important;
   }
 }
@@ -114,37 +139,39 @@ header {
 
 }
 
+.post-content {
+  img.featured {
+    width: 100%;
+    height: auto;
+  }
+}
+
 /**
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-  color: $coffee-bean;
+  color: $heading-color;
+  font-weight: 500;
 
   a, a:visited {
-    color: $coffee-bean;
+    color: $heading-color;
   }
 }
 
 h1, h2 {
 	font-family: "Helvetica Neue", sans-serif;
-	text-transform: uppercase;
-	font-weight: 500;
 	font-size: 1.4rem !important;
 }
-
-h3 {
-	font-weight: 500;
-	font-size: 1.3rem !important;
+h1, h3, h5 {
+  text-transform: uppercase;
 }
 
-h4 {
-	font-weight: 500;
-	font-size: 1.1rem !important;
+h3, h4 {
+	font-size: 1.2rem !important;
 }
+
 h5, h6 {
-	font-weight: 500;
 	font-size: 1rem !important;
-	text-transform: uppercase;
 }
 
 
@@ -152,7 +179,7 @@ h5, h6 {
  * Blockquotes
  */
 blockquote {
-  color: $deep-purple;
+  color: $blockquote;
 }
 
 
@@ -167,21 +194,21 @@ blockquote {
  * Links
  */
 .page-content a {
-  color: $sharp-magenta;
+  color: $link;
   text-decoration: none;
   font-weight: 500;
 
   &:visited {
-    color: $tyrian-purple;
+    color: $link-hover;
   }
 
   &:hover {
-    color: tyrian-purple;
-    text-decoration: underline $tyrian-purple;
+    color: $link-hover;
+    text-decoration: underline $link-hover;
     text-underline-offset: 3px;
   }
 
-  .social-media-list &:hover {
+  .social-media-list a:hover {
     text-decoration: none;
 
     .username {
@@ -190,21 +217,31 @@ blockquote {
   }
 }
 
+
+
+
+
 /**
  * Site footer
  */
 .site-footer {
-  border-top: 2px solid $dark-magenta;
+  border-top: 2px solid $border;
 }
 
 .footer-col-wrapper, .social-links {
-	color: $tyrian-purple !important;
+	color: $link !important;
 
   a,
   a:hover,
   a:visited {
-  	color: $tyrian-purple !important;
+  	color: $link-hover !important;
   }	
+}
+
+.footer-nav {
+  a.nav-item {
+    display: block;
+  }
 }
 
 .social-media-list {
@@ -213,15 +250,25 @@ blockquote {
 
 	li {
     float: left;
-    min-width: 30px;
-    min-height: 30px; 
-    /*text-align: center;*/
-    /*margin: 5px 5px 5px 0; */
+    min-width: 1.5rem;
+    min-height: 1.5rem; 
+    text-align: center;
+    /*margin: 5px 5px 5px 0;*/
 
     a {
     display: block;
     padding: 0;
     border: none;
+
+    svg {
+      width: 1.4rem;
+      height:1.4rem;
+      fill: $link;
+
+      &:hover {
+        fill: $link-hover;
+      }
+    }
   }
 }
 
